@@ -4,8 +4,8 @@ Minimal Node.js Docker Images (18MB, or 6.7MB compressed)
 Versions v7.1.0, v6.9.1, v4.6.2, v0.12.17 and v0.10.48 –
 built on [Alpine Linux](https://alpinelinux.org/).
 
-All versions use the one [mhart/alpine-node](https://hub.docker.com/r/mhart/alpine-node/) repository,
-but each version aligns with the following tags (ie, `mhart/alpine-node:<tag>`). The sizes are for the
+All versions use the one [fulhack/rpi-alpine-node](https://hub.docker.com/r/fulhack/rpi-alpine-node/) repository,
+but each version aligns with the following tags (ie, `fulhack/rpi-alpine-node:<tag>`). The sizes are for the
 *unpacked* images as reported by Docker – compressed sizes are about 1/3 of these:
 
 - Full install built with npm:
@@ -14,32 +14,20 @@ but each version aligns with the following tags (ie, `mhart/alpine-node:<tag>`).
   - `4`, `4.6`, `4.6.2` – 36.81 MB (npm 2.15.11)
   - `0.12`, `0.12.17` – 32.71 MB (npm 2.15.11)
   - `0.10`, `0.10.48` – 28.16 MB (npm 2.15.11)
-- Base install with node built as a static binary with no npm:
-  - `base`, `base-7`, `base-7.1`, `base-7.1.0` – 41.98 MB
-  - `base-6`, `base-6.9`, `base-6.9.1` – 38.17 MB
-  - `base-4`, `base-4.6`, `base-4.6.2` – 27.86 MB
-  - `base-0.12`, `base-0.12.17` – 24.07 MB
-  - `base-0.10`, `base-0.10.48` – 18.22 MB
 
-Major io.js versions [are tagged too](https://hub.docker.com/r/mhart/alpine-node/tags/).
+Major io.js versions [are tagged too](https://hub.docker.com/r/fulhack/rpi-alpine-node/tags/).
 
 Examples
 --------
 
-    $ docker run mhart/alpine-node node --version
+    $ docker run fulhack/rpi-alpine-node node --version
     v7.1.0
 
-    $ docker run mhart/alpine-node npm --version
+    $ docker run fulhack/rpi-alpine-node npm --version
     3.10.9
 
-    $ docker run mhart/alpine-node:6 node --version
+    $ docker run fulhack/rpi-alpine-node:6 node --version
     v6.9.1
-
-    $ docker run mhart/alpine-node:base node --version
-    v7.1.0
-
-    $ docker run mhart/alpine-node:base-0.10 node --version
-    v0.10.48
 
 Example Dockerfile for your own Node.js project
 -----------------------------------------------
@@ -48,11 +36,9 @@ If you don't have any native dependencies, ie only depend on pure-JS npm
 modules, then my suggestion is to run `npm install` locally *before* running
 `docker build` (and make sure `node_modules` isn't in your `.dockerignore`) –
 then you don't need an `npm install` step in your Dockerfile and you don't need
-`npm` installed in your Docker image – so you can use one of the smaller
-`base*` images.
+`npm` installed in your Docker image.
 
-    FROM mhart/alpine-node:base-6
-    # FROM mhart/alpine-node:6
+    FROM fulhack/rpi-alpine-node:6
 
     WORKDIR /src
     ADD . .
