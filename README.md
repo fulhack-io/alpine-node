@@ -5,7 +5,7 @@ This is a fork from mhart/alpine-node using rpi alpine
 Minimal Node.js Docker Images (18MB, or 6.7MB compressed)
 ---------------------------------------------------------
 
-Versions v7.1.0, v6.9.1, v4.6.2, v0.12.17 and v0.10.48 –
+Versions v7.1.0, v6.9.1.
 built on [Alpine Linux](https://alpinelinux.org/).
 
 All versions use the one [fulhack/rpi-alpine-node](https://hub.docker.com/r/fulhack/rpi-alpine-node/) repository,
@@ -15,9 +15,6 @@ but each version aligns with the following tags (ie, `fulhack/rpi-alpine-node:<t
 - Full install built with npm:
   - `latest`, `7`, `7.1`, `7.1.0` – 54.26 MB (npm 3.10.9)
   - `6`, `6.9`, `6.9.1` – 49.73 MB (npm 3.10.8)
-  - `4`, `4.6`, `4.6.2` – 36.81 MB (npm 2.15.11)
-  - `0.12`, `0.12.17` – 32.71 MB (npm 2.15.11)
-  - `0.10`, `0.10.48` – 28.16 MB (npm 2.15.11)
 
 Major io.js versions [are tagged too](https://hub.docker.com/r/fulhack/rpi-alpine-node/tags/).
 
@@ -26,9 +23,6 @@ Examples
 
     $ docker run fulhack/rpi-alpine-node node --version
     v7.1.0
-
-    $ docker run fulhack/rpi-alpine-node npm --version
-    3.10.9
 
     $ docker run fulhack/rpi-alpine-node:6 node --version
     v6.9.1
