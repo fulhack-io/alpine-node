@@ -13,8 +13,8 @@ but each version aligns with the following tags (ie, `fulhack/rpi-alpine-node:<t
 *unpacked* images as reported by Docker – compressed sizes are about 1/3 of these:
 
 - Full install built with npm:
-  - `latest`, `7`, `7.1`, `7.1.0` – 54.26 MB (npm 3.10.9)
-  - `6`, `6.9`, `6.9.1` – 49.73 MB (npm 3.10.8)
+  - `latest`, `7`, `7.1`, `7.1.0` – 51.07 MB (npm 3.10.9)
+  - `6`, `6.9`, `6.9.1` – 46.71 MB (npm 3.10.8)
 
 Major io.js versions [are tagged too](https://hub.docker.com/r/fulhack/rpi-alpine-node/tags/).
 
