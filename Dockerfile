@@ -3,10 +3,6 @@ FROM hypriot/rpi-alpine-scratch:v3.4
 ENV VERSION=v6.9.1 NPM_VERSION=3
 # ENV VERSION=v7.1.0 NPM_VERSION=3
 
-# For base builds
-# ENV CONFIG_FLAGS="--without-npm" RM_DIRS=/usr/include
-# ENV CONFIG_FLAGS="--fully-static --without-npm" DEL_PKGS="libgcc libstdc++" RM_DIRS=/usr/include
-
 RUN apk add --no-cache curl make gcc g++ python linux-headers paxctl libgcc libstdc++ gnupg && \
   gpg --keyserver ha.pool.sks-keyservers.net --recv-keys \
     9554F04D7259F04124DE6B476D5A82AC7E37093B \
