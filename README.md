@@ -2,7 +2,7 @@
 
 This is a fork from mhart/alpine-node using rpi alpine 
 
-Minimal Node.js Docker Images (18MB, or 6.7MB compressed)
+Minimal Node.js Docker Images
 ---------------------------------------------------------
 
 Versions v7.1.0, v6.9.1.
