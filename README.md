@@ -16,8 +16,6 @@ but each version aligns with the following tags (ie, `fulhack/rpi-alpine-node:<t
   - `latest`, `7`, `7.2`, `7.2.0` – 51.07 MB (npm 3.10.9)
   - `6`, `6.9`, `6.9.1` – 46.71 MB (npm 3.10.8)
 
-Major io.js versions [are tagged too](https://hub.docker.com/r/fulhack/rpi-alpine-node/tags/).
-
 Examples
 --------
 
